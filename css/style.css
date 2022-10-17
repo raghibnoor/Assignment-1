@@ -1,0 +1,32 @@
+body {
+    text-align: center;
+    border: 10px solid orangered; 
+    padding: 20px;
+}
+h1 {
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px #800707;
+}
+h2 {
+    font-size: 20px;
+    text-align: center;
+}
+img {
+    width: 100%;
+    max-width: 50%;
+    border: 5px solid black;
+}
+ul {
+    list-style: none;
+}
+p {
+    font-family: 'Times New Roman', Times, serif;
+}
+.pagetitle {
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: orangered;
+    text-shadow: 8px 8px #121111;
+
+}

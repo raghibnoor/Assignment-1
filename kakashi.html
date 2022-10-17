@@ -1,0 +1,54 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/moment.min.js"></script>
+<script src="js/moment-timezone-with-data.min.js"></script>
+
+<script type="text/javascript">
+
+/***********************************************
+* Local Time script- By Dynamic Drive (http://www.dynamicdrive.com)
+* Please keep this notice intact
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+
+
+function showLocalTime(container, zoneString, formatString){
+	var thisobj=this
+	this.container=document.getElementById(container)
+	this.localtime = moment.tz(new Date(), zoneString)
+	this.formatString = formatString
+	this.container.innerHTML = this.localtime.format( this.formatString )
+	setInterval(function(){thisobj.updateContainer()}, 1000) //update container every second
+}
+
+showLocalTime.prototype.updateContainer=function(){
+	this.localtime.second(this.localtime.seconds() + 1 )
+	this.container.innerHTML = this.localtime.format( this.formatString )
+}
+
+
+</script>
+</head>
+<body>
+    <div class="bigbox"><b>Bangladesh:</b> <span id="dhaka"></span></div>
+
+<script type="text/javascript">
+
+new showLocalTime("dhaka", "Asia/Dhaka", "hh:mm:ss A (ddd)")
+
+</script>
+<h1 class="pagetitle">Hatake Kakashi</h1>
+    <h2 class="pagesubtitle">Kakashi The Copy Ninja</h2>
+<img src="images/kakashi.jpg" alt="">
+<p>Kakashi Hatake (はたけカカシ, Hatake Kakashi) is a shinobi of Konohagakure's Hatake clan. Famed as Kakashi of the Sharingan (写輪眼のカカシ, Sharingan no Kakashi), he is one of Konoha's most talented ninja, regularly looked to for advice and leadership despite his personal dislike of responsibility. To his students on Team 7, Kakashi emphasises the importance of teamwork; he himself received this lesson, along with the Sharingan, from his childhood friend, Obito Uchiha. After the Fourth Shinobi World War, Kakashi becomes Konoha's Sixth Hokage (六代目火影, Rokudaime Hokage, literally meaning: Sixth Fire Shadow).</p>
+<div>
+    visit <a href="https://naruto.fandom.com/wiki/Naruto_Uzumaki"> Naruto Fandom</a> homepage
+<ul>
+    <li><a href="index.html"> Uzumaki Naruto</a></li>
+    <li><a href="sasuke.html"> Uchiha Sasuke</a></li>
+    <li><a href="jiraiya.html"> Jiraiya Sensei</a></li>
+</ul>
+</div>
+</body>
+</html>

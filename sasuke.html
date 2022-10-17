@@ -1,0 +1,54 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/moment.min.js"></script>
+<script src="js/moment-timezone-with-data.min.js"></script>
+
+<script type="text/javascript">
+
+/***********************************************
+* Local Time script- By Dynamic Drive (http://www.dynamicdrive.com)
+* Please keep this notice intact
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+
+
+function showLocalTime(container, zoneString, formatString){
+	var thisobj=this
+	this.container=document.getElementById(container)
+	this.localtime = moment.tz(new Date(), zoneString)
+	this.formatString = formatString
+	this.container.innerHTML = this.localtime.format( this.formatString )
+	setInterval(function(){thisobj.updateContainer()}, 1000) //update container every second
+}
+
+showLocalTime.prototype.updateContainer=function(){
+	this.localtime.second(this.localtime.seconds() + 1 )
+	this.container.innerHTML = this.localtime.format( this.formatString )
+}
+
+
+</script>
+</head>
+<body>
+    <div class="bigbox"><b>Bangladesh:</b> <span id="dhaka"></span></div>
+
+<script type="text/javascript">
+
+new showLocalTime("dhaka", "Asia/Dhaka", "hh:mm:ss A (ddd)")
+
+</script>
+<h1 class="pagetitle">Uchiha Sasuke</h1>
+<h2 class="pagesubtitle">The Last Surviving Uchiha</h2>
+<img src="images/sasuke.gif" alt="">
+<p>Sasuke Uchiha (うちはサスケ, Uchiha Sasuke) is one of the last surviving members of Konohagakure's Uchiha clan. After his older brother, Itachi, slaughtered their clan, Sasuke made it his mission in life to avenge them by killing Itachi. He is added to Team 7 upon becoming a ninja and, through competition with his rival and best friend, Naruto Uzumaki, Sasuke starts developing his skills. Dissatisfied with his progress, he defects from Konoha so that he can acquire the strength needed to exact his revenge. His years of seeking vengeance and his actions that followed become increasingly demanding, irrational and isolates him from others, leading him to be branded as an international criminal. After learning the truth of his brother's sacrifice, later proving instrumental in ending the Fourth Shinobi World War, and being happily redeemed by Naruto, Sasuke decides to return to Konoha and dedicate his life to help protect the village and its inhabitants, becoming referred to as the "Supporting Kage" (支う影, Sasaukage, literally meaning: Supporting Shadow).</p>
+<div>
+    visit <a href="https://naruto.fandom.com/wiki/Naruto_Uzumaki"> Naruto Fandom</a> homepage
+<ul>
+    <li><a href="index.html"> Uzumaki Naruto</a></li>
+    <li><a href="kakashi.html"> Hatake Kakashi</a></li>
+    <li><a href="jiraiya.html"> Jiraiya Sensei</a></li>
+</ul>
+</div>
+</body>
+</html>

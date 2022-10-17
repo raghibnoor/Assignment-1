@@ -1,0 +1,54 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/moment.min.js"></script>
+<script src="js/moment-timezone-with-data.min.js"></script>
+
+<script type="text/javascript">
+
+/***********************************************
+* Local Time script- By Dynamic Drive (http://www.dynamicdrive.com)
+* Please keep this notice intact
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+
+
+function showLocalTime(container, zoneString, formatString){
+	var thisobj=this
+	this.container=document.getElementById(container)
+	this.localtime = moment.tz(new Date(), zoneString)
+	this.formatString = formatString
+	this.container.innerHTML = this.localtime.format( this.formatString )
+	setInterval(function(){thisobj.updateContainer()}, 1000) //update container every second
+}
+
+showLocalTime.prototype.updateContainer=function(){
+	this.localtime.second(this.localtime.seconds() + 1 )
+	this.container.innerHTML = this.localtime.format( this.formatString )
+}
+
+
+</script>
+</head>
+<body>
+    <div class="bigbox"><b>Bangladesh:</b> <span id="dhaka"></span></div>
+
+<script type="text/javascript">
+
+new showLocalTime("dhaka", "Asia/Dhaka", "hh:mm:ss A (ddd)")
+
+</script>
+<h1 class="pagetitle">Ero Sennin</h1>
+<h2 class="pagesubtitle">The Legendary Toad Sage of Konoha</h2>
+<img src="images/jiraiya.png" alt="">
+<p>Jiraiya (自来也) was one of Konohagakure's Sannin. Famed as the one of the three legendary sage of Konoha with incomparable ninja skill, Jiraiya travelled the world in search of knowledge that would help his friends, the various novels he wrote, and, posthumously, the world in its entirety – knowledge that would be passed on to his godson and final student, Naruto Uzumaki.</p>
+<div>
+    visit <a href="https://naruto.fandom.com/wiki/Naruto_Uzumaki"> Naruto Fandom</a> homepage
+<ul>
+    <li><a href="index.html"> Uzumaki Naruto</a></li>
+    <li><a href="kakashi.html"> Hatake Kakashi</a></li>
+    <li><a href="sasuke.html"> Uchiha Sasuke</a></li>
+</ul>
+</div>
+</body>
+</html>
